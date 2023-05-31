@@ -1,0 +1,23 @@
+package simulacion.personajes;
+
+import simulacion.interfaces.Combate;
+
+// Clase Game.Personaje
+public class Personaje implements Combate {
+    private int salud;
+    private int defensa;
+    private int fuerza;
+
+    public Personaje(int defensa, int fuerza) {
+        this.salud = 12;
+        this.defensa = defensa;
+        this.fuerza = fuerza;
+    }
+
+
+
+    public int getSalud() {
+        return salud;
+    }
+
+}
