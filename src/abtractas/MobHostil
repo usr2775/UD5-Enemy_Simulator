@@ -1,0 +1,34 @@
+package simulacion.abstractas;
+
+import simulacion.abstractas.Mob;
+import simulacion.interfaces.Combate;
+
+public abstract class MobHostil extends Mob implements Combate {
+
+    private int fuerza;
+
+    public MobHostil(int salud, int fuerza) {
+        super(salud);
+        this.fuerza = fuerza;
+    }
+
+    @Override
+    public int atacar() {
+        return fuerza;
+    }
+
+    @Override
+    public void recibirAtaque(int ataque) {
+        salud += ataque;
+        System.out.println("Daño recibido: " + ataque);
+        System.out.println("Salud restante: " + salud);
+    }
+
+    public int getFuerza() {
+        return fuerza;
+    }
+
+    public void setFuerza(int fuerza) {
+        this.fuerza = fuerza;
+    }
+}
