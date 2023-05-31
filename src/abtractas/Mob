@@ -1,0 +1,16 @@
+package simulacion.abstractas;
+
+public abstract class Mob {
+    protected int salud;
+
+    public Mob(int salud) {
+        this.salud = salud;
+    }
+
+    public abstract void moverse();
+
+    public int getSalud() {
+        return salud;
+    }
+
+}

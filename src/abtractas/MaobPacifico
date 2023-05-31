@@ -1,0 +1,19 @@
+package simulacion.abstractas;
+
+import simulacion.interfaces.Daño;
+
+public abstract class MobPacifico extends Mob implements Daño {
+    public MobPacifico(int salud) {
+        super(salud);
+    }
+
+    @Override
+    public void recibirAtaque(int ataque) {
+        salud -= ataque;
+        System.out.println("Daño recibido: " + ataque);
+        System.out.println("Salud restante: " + salud);
+    }
+
+
+
+}
